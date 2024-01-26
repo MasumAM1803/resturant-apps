@@ -2,18 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Restaurant Apps</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | Abdul Restaurant</title>
   </head>
   <body>
-    <h1>Restaurant Apps Starter Project</h1>
-    <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-    <p>
-      Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros
-      sebagai background hero elemen.
-    </p>
-    <img src="./images/heros/hero-image_1.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_4.jpg" width="450" alt="" />
+    <header>
+      <nav-app brandName="<%= brandName %>"></nav-app>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="container py-5">
+          <h1><%= brandName %></h1>
+          <img src="./images/heros/hero-image_1.jpg" alt="hero image" class="hero-img" />
+          <!-- <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
+          <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
+          <img src="./images/heros/hero-image_4.jpg" width="450" alt="" /> -->
+          <section>
+            <h2>Restaurant List</h2>
+            <div class="">
+              <div class="table-container">
+                <table class="table" id="recordsTable">
+                  <thead>
+                    <tr>
+                      <th class="">No</th>
+                      <th class="">Picture</th>
+                      <th class="">Name</th>
+                      <th class="">Description</th>
+                      <th class="">City</th>
+                      <th class="">Rating</th>
+                      <th class="">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="main-footer">
+        <div class="container">
+          <footer-app></footer-app>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>

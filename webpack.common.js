@@ -3,6 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const htmlWebpackPluginConfig = {
+  meta: {
+    viewport:
+      'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
+  },
+  templateParameters: {
+    brandName: 'Abdul Restaurant',
+  },
+};
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -31,8 +41,10 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     new HtmlWebpackPlugin({
+      title: 'Home',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
+      ...htmlWebpackPluginConfig,
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -42,5 +54,6 @@ module.exports = {
         },
       ],
     }),
+    new CleanWebpackPlugin(),
   ],
 };
