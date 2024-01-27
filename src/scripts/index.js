@@ -4,9 +4,11 @@ import './components/index';
 
 // Import javascript file as needed
 import Home from './pages/home';
+import Detail from './pages/detail';
 
 const routes = {
   '/': Home,
+  '/pages/detail.html': Detail,
 };
 
 const detectRoute = () => routes[window.location.pathname];

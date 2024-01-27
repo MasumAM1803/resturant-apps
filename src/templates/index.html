@@ -12,31 +12,19 @@
 
     <main>
       <div class="main-content">
-        <div class="container py-5">
-          <h1><%= brandName %></h1>
-          <img src="./images/heros/hero-image_1.jpg" alt="hero image" class="hero-img" />
-          <!-- <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
-          <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
-          <img src="./images/heros/hero-image_4.jpg" width="450" alt="" /> -->
-          <section>
-            <h2>Restaurant List</h2>
-            <div class="">
-              <div class="table-container">
-                <table class="table" id="recordsTable">
-                  <thead>
-                    <tr>
-                      <th class="">No</th>
-                      <th class="">Picture</th>
-                      <th class="">Name</th>
-                      <th class="">Description</th>
-                      <th class="">City</th>
-                      <th class="">Rating</th>
-                      <th class="">Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
+        <div class="py-5">
+          <section id="jumbotron-section">
+            <div class="jumbotron-container">
+              <img src="./images/heros/hero-image_1.jpg" alt="hero image" class="hero-img" />
+            </div>
+          </section>
+          <section class="list-container">
+            <div class="container">
+              <h2>Restaurant List</h2>
+              <div class="mt-3">
+                <div id="recordsCard" class="row"></div>
               </div>
+            </div>
           </section>
         </div>
       </div>

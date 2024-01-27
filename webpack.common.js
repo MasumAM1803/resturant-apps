@@ -59,19 +59,19 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Favorite',
-      filename: 'favorite.html',
+      filename: 'pages/favorite.html',
       template: path.resolve(__dirname, 'src/templates/pages/favorite.html'),
       ...htmlWebpackPluginConfig,
     }),
     new HtmlWebpackPlugin({
       title: 'About Us',
-      filename: 'about-us.html',
+      filename: 'pages/about-us.html',
       template: path.resolve(__dirname, 'src/templates/pages/about-us.html'),
       ...htmlWebpackPluginConfig,
     }),
     new HtmlWebpackPlugin({
       title: 'Detail',
-      filename: 'detail.html',
+      filename: 'pages/detail.html',
       template: path.resolve(__dirname, 'src/templates/pages/detail.html'),
       ...htmlWebpackPluginConfig,
     }),

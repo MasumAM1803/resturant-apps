@@ -21,7 +21,7 @@ class NavApp extends LitWithoutShadowDom {
     return html`
       <nav class="navbar">
         <div class="container">
-          <span class="navbar-brand">${this.brandName}</span>
+          <img src="/images/mam-logo.png" width="44px" alt="${this.brandName}" />
           <button
             class="navbar-toggler"
             type="button"
