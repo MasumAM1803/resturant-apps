@@ -25,7 +25,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        // test: /\.css$/,
+        test: /\.(s[ac]ss)$/i,
         use: [
           {
             loader: 'style-loader',
@@ -33,17 +34,45 @@ module.exports = {
           {
             loader: 'css-loader',
           },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: () => [require('autoprefixer')],
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
         ],
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
-
+    // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Home',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
+      ...htmlWebpackPluginConfig,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Favorite',
+      filename: 'favorite.html',
+      template: path.resolve(__dirname, 'src/templates/pages/favorite.html'),
+      ...htmlWebpackPluginConfig,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'About Us',
+      filename: 'about-us.html',
+      template: path.resolve(__dirname, 'src/templates/pages/about-us.html'),
+      ...htmlWebpackPluginConfig,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Detail',
+      filename: 'detail.html',
+      template: path.resolve(__dirname, 'src/templates/pages/detail.html'),
       ...htmlWebpackPluginConfig,
     }),
     new CopyWebpackPlugin({

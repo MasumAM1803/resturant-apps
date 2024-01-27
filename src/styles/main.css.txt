@@ -9,12 +9,13 @@ main {
 /* ===== HEADER ===== */
 header {
   overflow: hidden;
-  background-color: #333;
+  background-color: #404258;
+  font-size: 17px;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #404258;
 }
 
 .navbar .container {
@@ -49,12 +50,12 @@ header {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #6B728E;
+  color: white;
+  border-radius: 8px;
 }
 
 .navbar a.active {
@@ -69,7 +70,7 @@ header {
 /* ===== CONTENT ===== */
 .main-footer {
   display: flex;
-  background-color: #333;
+  background-color: #404258;
   color: #FFF;
   justify-content: center;
 }

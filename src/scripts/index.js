@@ -1,5 +1,5 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import '../styles/main.css';
+import '../styles/scss/main.scss';
 import './components/index';
 
 // Import javascript file as needed
