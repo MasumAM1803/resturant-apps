@@ -18,7 +18,8 @@ body {
   margin: 0;
 }
 
-.container {
+.container,
+.navbar-container {
   padding: 10px;
 }
 
@@ -33,6 +34,7 @@ a { text-decoration: none; }
   background-color: #404258;
   color: #FFF;
   justify-content: center;
+  text-align: center;
 }
 
 .text-red {
@@ -52,7 +54,7 @@ header {
   background-color: $primary-color;
 }
 
-.navbar .container {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,42 +65,47 @@ header {
   color: #FFF;
 }
 
-.navbar button.navbar-toggler {
+// .navbar button.navbar-toggler {
+//   display: none;
+//   min-width: 44px;
+//   max-width: 44px;
+//   padding: 5px 10px;
+// }
+
+.header__menu {
+  float: right;
   display: none;
-  min-width: 44px;
-  max-width: 44px;
-  padding: 5px 10px;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-}
-
-.navbar a {
-  /* float: left; */
-  display: block;
+  cursor: pointer;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-.navbar a:hover {
+.nav ul {
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+.nav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav a:hover {
   background-color: $forth-color;
   color: white;
   border-radius: 8px;
 }
 
-.navbar a.active {
+.nav a.active {
   background-color: #04AA6D;
   color: white;
-}
-
-.navbar .icon {
-  display: none;
 }
 
 /* ===== CONTENT ===== */
@@ -284,11 +291,11 @@ main .container {
 }
 
 @media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
-  .navbar a.icon {
-    float: right;
-    display: block;
-  }
+  // .navbar a:not(:first-child) {display: none;}
+  // .navbar a.icon {
+  //   float: right;
+  //   display: block;
+  // }
 
   .navbar.responsive {position: relative;}
   .navbar.responsive .icon {
@@ -300,6 +307,36 @@ main .container {
     float: none;
     display: block;
     text-align: left;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    padding: 5px 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav ul {
+    text-align: left;
+    display: block;
+  }
+
+  .nav ul li {
+    padding: 14px 14px 14px 0px;
+  }
+
+  .nav a {
+    padding: 0px;
+  }
+
+  .open {
+    display: block;
   }
 
   .jumbotron-container {
@@ -318,7 +355,7 @@ main .container {
 
   .list-container h2 { 
     font-size: 26px;
-    margin: 20px 0px 0px 5px;
+    margin: 20px 0px 0px 0px;
   }
 
   .card {

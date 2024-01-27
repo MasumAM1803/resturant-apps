@@ -19,22 +19,15 @@ class NavApp extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <nav class="navbar">
-        <div class="container">
+      <div class="navbar">
+        <div class="navbar-container">
           <img src="/images/mam-logo.png" width="44px" alt="${this.brandName}" />
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a id="menu" class="header__menu">☰</a>
+          <nav id="drawer" class="nav">
             <nav-links class="ms-auto mb-2 mb-md-0">
-          </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     `;
   }
 }

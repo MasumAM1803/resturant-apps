@@ -24,8 +24,27 @@ const initPages = () => {
 };
 
 window.addEventListener('DOMContentLoaded', async () => {
+  const menu = document.querySelector('#menu');
+  // const hero = document.querySelector('.hero');
+  const main = document.querySelector('main');
+  const drawer = document.querySelector('#drawer');
+
   initPages();
 
   const route = detectRoute();
   route.init();
+
+  menu.addEventListener('click', function (event) {
+    console.log("here")
+    drawer.classList.toggle('open');
+    event.stopPropagation();
+  });
+  
+  // hero.addEventListener('click', function () {
+  //   drawer.classList.remove('open');
+  // });
+  
+  main.addEventListener('click', function () {
+    drawer.classList.remove('open');
+  });
 });
