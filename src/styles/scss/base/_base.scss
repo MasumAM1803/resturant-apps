@@ -18,6 +18,10 @@ body {
   margin: 0;
 }
 
+main {
+  padding-top: 54px;
+}
+
 .container,
 .navbar-container {
   padding: 10px;
@@ -47,6 +51,11 @@ header {
   overflow: hidden;
   background-color: $primary-color;
   font-size: 17px;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 .navbar {
