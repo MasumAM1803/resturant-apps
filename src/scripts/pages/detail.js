@@ -46,8 +46,8 @@ const Detail = {
         pictureId = restaurantRecord.pictureId
       }
       return recordCard.innerHTML = `
-        <div class="container">
-            <div class="row">
+        <div class="container detail-section">
+            <div class="detail-container row">
             <div class="col-12 detail-title">
                 <h2>${restaurantRecord.name}</h2>
                 <h2>(${restaurantRecord.city})</h2>
@@ -57,7 +57,7 @@ const Detail = {
                     <img src="${pictureId}" alt="${restaurantRecord.name}-images" />
                 </div>
                 <p class="detail-rating">Rating: <span class="text-red">${restaurantRecord.rating}</span></p>
-                <p>${restaurantRecord.description}</p>
+                <p class="detail-description">${restaurantRecord.description}</p>
             </div>
             </div>
         </div>
