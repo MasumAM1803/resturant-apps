@@ -52,6 +52,10 @@ header {
 .navbar {
   overflow: hidden;
   background-color: $primary-color;
+
+  .navbar-brand {
+    color: #FFF;
+  }
 }
 
 .navbar-container {
@@ -59,10 +63,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
-}
-
-.navbar .navbar-brand {
-  color: #FFF;
 }
 
 .header__menu {
@@ -75,29 +75,31 @@ header {
   text-decoration: none;
 }
 
-.nav ul {
-  text-align: left;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-}
-
-.nav a {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  
-  &:hover {
-    background-color: $forth-color;
-    color: white;
-    border-radius: 8px;
+.nav {
+  ul {
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
   }
 
-  &:active {
-    background-color: #04AA6D;
-    color: white;
+  a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: $forth-color;
+      color: white;
+      border-radius: 8px;
+    }
+  
+    &:active {
+      background-color: #04AA6D;
+      color: white;
+    }
   }
 }
 
@@ -107,8 +109,10 @@ header {
   padding: 20px 80px;
 }
 
-.list-container > h2 {
-  font-size: 32px;
+.list-container {
+  h2 {
+    font-size: 32px;
+  }
 }
 
 .row {
@@ -211,15 +215,15 @@ header {
   min-width: 1000px;
   min-height: 600px;
   max-height: 600px;
-}
 
-.jumbotron-container img {
-  min-width: 100%;
-  position: absolute;
-  left: 0;
-  max-height: 100%;
-  object-fit: cover;
-  object-position: top;
+  img {
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 
 main .container {
@@ -241,19 +245,19 @@ main .container {
   display: flex;
   align-items: center;
   gap: 10px;
-}
 
-.detail-title > h2 {
-  font-size: 28px;
+  h2 {
+    font-size: 28px;
+  }
 }
 
 .detail-image {
   max-width: 100%;
   text-align: center;
-}
 
-.detail-image img {
-  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
 }
 
 .detail-rating {
@@ -264,9 +268,11 @@ main .container {
   text-align: justify;
 }
 
-.content > h2 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.content {
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 /* ===== RESPONSIVE ===== */
@@ -287,9 +293,9 @@ main .container {
 @media screen and (max-width: 1199px) {
   .jumbotron-container {
     min-width: 100%;
-  }
-  .jumbotron-container img {
-    max-width: 100%;
+    img {
+      max-width: 100%;
+    }
   }
 }
 
@@ -305,29 +311,29 @@ main .container {
 
   .nav {
     display: none;
-  }
 
-  .nav ul {
-    text-align: left;
-    display: block;
-  }
+    ul {
+      text-align: left;
+      display: block;
 
-  .nav ul li {
-    display: flex;
-    width: 100%;
-  }
+      li {
+        display: flex;
+        width: 100%;
 
-  .nav ul li > a {
-    width: 100%;
-    text-align: left;
-    padding: 14px 14px 14px 5px;
-  }
+        a {
+          width: 100%;
+          text-align: left;
+          padding: 14px 14px 14px 5px;
+        }
+      }
+    }
 
-  .nav a {
-    padding: 0px;
-
-    &:hover {
-      border-radius: 4px;
+    a {
+      padding: 0px;
+  
+      &:hover {
+        border-radius: 4px;
+      }
     }
   }
 
@@ -338,23 +344,23 @@ main .container {
 
   .jumbotron-container {
     min-height: 320px;
-  }
 
-  .jumbotron-container img {
-    min-width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 320px;
+    img {
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 320px;
+    }
   }
 
   .list-container {
     text-align: center;
     padding: 20px 5px;
-  }
 
-  .list-container h2 { 
-    font-size: 26px;
-    margin: 20px 0px 0px 0px;
+    h2 { 
+      font-size: 26px;
+      margin: 20px 0px 0px 0px;
+    }
   }
 
   .card {
