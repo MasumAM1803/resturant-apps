@@ -65,13 +65,6 @@ header {
   color: #FFF;
 }
 
-// .navbar button.navbar-toggler {
-//   display: none;
-//   min-width: 44px;
-//   max-width: 44px;
-//   padding: 5px 10px;
-// }
-
 .header__menu {
   float: right;
   display: none;
@@ -95,17 +88,17 @@ header {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
+  
+  &:hover {
+    background-color: $forth-color;
+    color: white;
+    border-radius: 8px;
+  }
 
-.nav a:hover {
-  background-color: $forth-color;
-  color: white;
-  border-radius: 8px;
-}
-
-.nav a.active {
-  background-color: #04AA6D;
-  color: white;
+  &:active {
+    background-color: #04AA6D;
+    color: white;
+  }
 }
 
 /* ===== CONTENT ===== */
@@ -277,38 +270,30 @@ main .container {
 }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: 1199px) {
-  .jumbotron-container {
-    min-width: 100%;
+@media screen and (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .col-md-6 {
     flex: 0 0 auto;
     width: 33.33%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  // .navbar a:not(:first-child) {display: none;}
-  // .navbar a.icon {
-  //   float: right;
-  //   display: block;
-  // }
-
-  .navbar.responsive {position: relative;}
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+@media screen and (max-width: 1199px) {
+  .jumbotron-container {
+    min-width: 100%;
   }
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+  .jumbotron-container img {
+    max-width: 100%;
   }
+}
 
+@media screen and (max-width: 768px) {
   .header__menu {
     display: block;
   }
@@ -328,15 +313,27 @@ main .container {
   }
 
   .nav ul li {
-    padding: 14px 14px 14px 0px;
+    display: flex;
+    width: 100%;
+  }
+
+  .nav ul li > a {
+    width: 100%;
+    text-align: left;
+    padding: 14px 14px 14px 5px;
   }
 
   .nav a {
     padding: 0px;
+
+    &:hover {
+      border-radius: 4px;
+    }
   }
 
   .open {
     display: block;
+    transition: 300ms;
   }
 
   .jumbotron-container {
@@ -345,6 +342,8 @@ main .container {
 
   .jumbotron-container img {
     min-width: 100%;
+    max-width: 100%;
+    height: 100%;
     max-height: 320px;
   }
 
