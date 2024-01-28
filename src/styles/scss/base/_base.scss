@@ -45,6 +45,21 @@ a { text-decoration: none; }
   color: red;
 }
 
+.skip-link {
+  position: fixed;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 99990;
+}
+
+.skip-link:focus {
+  top: 58px;
+  left: 4px;
+}
+
 
 /* ===== HEADER ===== */
 header {
@@ -309,6 +324,14 @@ main .container {
 }
 
 @media screen and (max-width: 768px) {
+  .skip-link {
+    padding: 4px;
+  }
+  
+  .skip-link:focus {
+    top: 60px;
+  }
+
   .header__menu {
     display: block;
   }

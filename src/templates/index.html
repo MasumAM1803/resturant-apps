@@ -6,11 +6,13 @@
     <title><%= htmlWebpackPlugin.options.title %> | Abdul Restaurant</title>
   </head>
   <body>
+    <btn-main-content></btn-main-content>
+
     <header>
       <nav-app brandName="<%= brandName %>"></nav-app>
     </header>
 
-    <main>
+    <main >
       <div class="main-content">
         <div class="py-5">
           <section id="jumbotron-section">
@@ -18,7 +20,7 @@
               <img src="./images/heros/hero-image_1.jpg" alt="hero image" class="hero-img" />
             </div>
           </section>
-          <section class="list-container">
+          <section class="list-container" id="maincontent">
             <div class="container">
               <h2>Restaurant List</h2>
               <div class="mt-3">
