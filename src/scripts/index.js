@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   const app = new App({
     button: document.querySelector('#menu'),
     drawer: document.querySelector('#drawer'),
-    content: document.querySelector('#main'),
+    content: document.querySelector('main'),
   });
   
 });
