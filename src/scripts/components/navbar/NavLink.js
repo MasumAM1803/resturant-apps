@@ -9,7 +9,7 @@ class NavLink extends LitWithoutShadowDom {
 
   constructor() {
     super();
-    this._checkAvailabilityProperty()
+    this._checkAvailabilityProperty();
   }
 
   _checkAvailabilityProperty() {

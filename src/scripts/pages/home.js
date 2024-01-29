@@ -36,11 +36,11 @@ const Dashboard = {
     });
   },
 
-  _templateCard(index, restaurantRecord, pictureId = "") {
+  _templateCard(index, restaurantRecord, pictureId = '') {
     if (restaurantRecord.pictureId == null) {
-      pictureId = 'https://dummyimage.com/500x750/cccccc/000000&text=No+Poster'
+      pictureId = 'https://dummyimage.com/500x750/cccccc/000000&text=No+Poster';
     } else {
-      pictureId = restaurantRecord.pictureId
+      pictureId = restaurantRecord.pictureId;
     }
     return `
       <div class="col-12 col-md-6 mt-3">

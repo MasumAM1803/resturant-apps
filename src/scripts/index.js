@@ -2,6 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/scss/main.scss';
 import './components/index';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 // Import javascript file as needed
 import Home from './pages/home';
@@ -24,17 +25,25 @@ const initPages = () => {
   }
 };
 
-
 window.addEventListener('DOMContentLoaded', async () => {
   initPages();
 
   const route = detectRoute();
   route.init();
 
+  // eslint-disable-next-line no-unused-vars
   const app = new App({
     button: document.querySelector('#menu'),
     drawer: document.querySelector('#drawer'),
     content: document.querySelector('main'),
   });
-  
+
+  window.addEventListener('hashchange', () => {
+    // app.renderPage();
+  });
+
+  window.addEventListener('load', () => {
+    // app.renderPage();
+    swRegister();
+  });
 });
