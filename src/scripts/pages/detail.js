@@ -54,7 +54,7 @@ const Detail = {
             </div>
             <div class="content">
                 <div class="detail-image">
-                    <img src="${pictureId}" alt="${restaurantRecord.name}-images" />
+                  <img src="${pictureId}" alt="${restaurantRecord.name}-images" />
                 </div>
                 <p class="detail-rating">Rating: <span class="text-red">${restaurantRecord.rating}</span></p>
                 <p class="detail-description">${restaurantRecord.description}</p>
