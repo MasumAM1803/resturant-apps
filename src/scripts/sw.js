@@ -7,7 +7,7 @@ self.addEventListener('active', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  console.log(event.request);
+  // console.log(event.request);
 
   event.responWidth(fetch(event.request));
 });

@@ -58,24 +58,24 @@ module.exports = {
       template: path.resolve(__dirname, 'src/templates/index.html'),
       ...htmlWebpackPluginConfig,
     }),
-    new HtmlWebpackPlugin({
-      title: 'Favorite',
-      filename: 'pages/favorite.html',
-      template: path.resolve(__dirname, 'src/templates/pages/favorite.html'),
-      ...htmlWebpackPluginConfig,
-    }),
-    new HtmlWebpackPlugin({
-      title: 'About Us',
-      filename: 'pages/about-us.html',
-      template: path.resolve(__dirname, 'src/templates/pages/about-us.html'),
-      ...htmlWebpackPluginConfig,
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Detail',
-      filename: 'pages/detail.html',
-      template: path.resolve(__dirname, 'src/templates/pages/detail.html'),
-      ...htmlWebpackPluginConfig,
-    }),
+    // new HtmlWebpackPlugin({
+    //   title: 'Favorite',
+    //   filename: 'pages/favorite.html',
+    //   template: path.resolve(__dirname, 'src/templates/pages/favorite.html'),
+    //   ...htmlWebpackPluginConfig,
+    // }),
+    // new HtmlWebpackPlugin({
+    //   title: 'About Us',
+    //   filename: 'pages/about-us.html',
+    //   template: path.resolve(__dirname, 'src/templates/pages/about-us.html'),
+    //   ...htmlWebpackPluginConfig,
+    // }),
+    // new HtmlWebpackPlugin({
+    //   title: 'Detail',
+    //   filename: 'pages/detail.html',
+    //   template: path.resolve(__dirname, 'src/templates/pages/detail.html'),
+    //   ...htmlWebpackPluginConfig,
+    // }),
     new CopyWebpackPlugin({
       patterns: [
         {
