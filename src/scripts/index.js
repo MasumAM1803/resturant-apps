@@ -26,10 +26,6 @@ const initPages = () => {
 
 
 window.addEventListener('DOMContentLoaded', async () => {
-  // const menu = document.querySelector('#menu');
-  // const main = document.querySelector('main');
-  // const drawer = document.querySelector('#drawer');
-
   initPages();
 
   const route = detectRoute();
@@ -41,12 +37,4 @@ window.addEventListener('DOMContentLoaded', async () => {
     content: document.querySelector('#main'),
   });
   
-  // menu.addEventListener('click', function (event) {
-  //   drawer.classList.toggle('open');
-  //   event.stopPropagation();
-  // });
-  
-  // main.addEventListener('click', function () {
-  //   drawer.classList.remove('open');
-  // });
 });
