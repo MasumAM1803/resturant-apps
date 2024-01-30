@@ -11,7 +11,7 @@ const Home = {
                     <img src="./images/heros/hero-image_1.jpg" alt="hero image" class="hero-img" />
                     </div>
                 </section>
-                <section class="list-container" id="maincontent">
+                <section tabindex="0" class="list-container" id="maincontent">
                     <div class="container">
                     <h2>Restaurant List</h2>
                     <div class="mt-3">

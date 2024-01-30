@@ -6,7 +6,7 @@ const Like = {
     return `
         <div class="main-content">
             <div class="py-5">
-                <section class="list-container" id="maincontent">
+                <section tabindex="0" class="list-container" id="maincontent">
                     <div class="container">
                     <h2>Your Liked Restaurant</h2>
                     <div class="mt-3">

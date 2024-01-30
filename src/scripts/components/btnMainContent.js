@@ -4,7 +4,7 @@ import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 class btnMainContent extends LitWithoutShadowDom {
   render() {
     return html`
-      <a href="#maincontent" class="skip-link">Go to Main Content</a>
+      <button class="skip-link">Go to Main Content</button>
     `;
   }
 }

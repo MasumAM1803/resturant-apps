@@ -6,7 +6,7 @@ import { createCardDetail } from '../templates/template-card';
 const Detail = {
   async render() {
     return `
-      <div id="maincontent" class="main-content">
+      <div tabindex="0" id="maincontent" class="main-content">
         <div class="container py-5">
           <div>
             <div class="mt-5">
