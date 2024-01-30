@@ -52,8 +52,8 @@ const createCardDetail = (restaurantRecord, pictureId) => `
                     </div>
                 </div>
                 <div class="card h-fit border-none mt-4">
-                    <h3 class="detail__card-title">Latest Reviews</h3>
-                    <ul class="list-item">
+                    <h3 class="detail__card-title">Reviews</h3>
+                    <ul class="list-item max-h-600 overflow-y-auto">
                         ${createCardReviewTemplate(restaurantRecord.customerReviews)}
                     </ul>
                 </div>
@@ -75,7 +75,7 @@ const createTableBodyTemplate = (menus) => {
 
 const createCardReviewTemplate = (reviews) => {
   let html = '';
-  reviews.slice(0, 5).forEach((review) => {
+  reviews.forEach((review) => {
     html += `
           <li>
             <div class="card p-2 rounded-default">
