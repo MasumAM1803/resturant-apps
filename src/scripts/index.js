@@ -3,8 +3,6 @@ import '../styles/scss/main.scss';
 import './components/index';
 import App from './views/app';
 import swRegister from './utils/sw-register';
-// import WebSocketInitiator from './utils/websocket-initiator';
-// import CONFIG from './globals/config';
 
 window.addEventListener('DOMContentLoaded', async () => {
   const app = new App({
@@ -20,6 +18,5 @@ window.addEventListener('DOMContentLoaded', async () => {
   window.addEventListener('load', () => {
     app.renderPage();
     swRegister();
-    // WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
   });
 });
