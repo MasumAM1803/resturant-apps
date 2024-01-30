@@ -3,6 +3,9 @@ import '../styles/scss/main.scss';
 import './components/index';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+// import WebSocketInitiator from './utils/websocket-initiator';
+// import FooterToolsInitiator from './utils/footer-tools-initiator';
+// import CONFIG from './globals/config';
 
 window.addEventListener('DOMContentLoaded', async () => {
 // eslint-disable-next-line no-unused-vars
@@ -19,5 +22,10 @@ window.addEventListener('DOMContentLoaded', async () => {
   window.addEventListener('load', () => {
     app.renderPage();
     swRegister();
+    // WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+    // FooterToolsInitiator.init({
+    //   subscribeButton: document.querySelector('#subscribePushNotification'),
+    //   unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
+    // });
   });
 });

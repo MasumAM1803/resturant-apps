@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable import/prefer-default-export */
 // import CONFIG from '../../globals/config';
 
@@ -31,10 +32,64 @@ const createCardDetail = (restaurantRecord, pictureId) => `
                 <img src="${pictureId}" alt="${restaurantRecord.name}-images" />
                 </div>
                 <p class="detail-rating">Rating: <span class="text-red">${restaurantRecord.rating}</span></p>
+                <p class="detail-rating">Address: ${restaurantRecord.address}</p>
                 <p class="detail-description">${restaurantRecord.description}</p>
+                <h3 class="detail__card-title">${restaurantRecord.name} Menu</h3>
+                <div class="card h-fit rounded-default">
+                    <div class="row justify-space-evenly p-2">
+                        <div>
+                            <h2>Food</h2>
+                            <ul class="list-item">
+                                ${createTableBodyTemplate(restaurantRecord.menus.foods)}
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>Drink</h2>
+                            <ul class="list-item">
+                                ${createTableBodyTemplate(restaurantRecord.menus.drinks)}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card h-fit border-none mt-4">
+                    <h3 class="detail__card-title">Latest Reviews</h3>
+                    <ul class="list-item">
+                        ${createCardReviewTemplate(restaurantRecord.customerReviews)}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 `;
 
-export { createCardTemplate, createCardDetail };
+const createTableBodyTemplate = (menus) => {
+  let html = '';
+  menus.forEach((menu) => {
+    html += `
+        <li>${menu.name}</li>
+    `;
+    return html;
+  });
+  return html;
+};
+
+const createCardReviewTemplate = (reviews) => {
+  let html = '';
+  reviews.slice(0, 5).forEach((review) => {
+    html += `
+          <li>
+            <div class="card p-2 rounded-default">
+                <h3>${review.name}</h3>
+                <h4>${review.date}</h4>
+                <p>${review.review}</p>
+            </div>
+          </li>
+      `;
+    return html;
+  });
+  return html;
+};
+
+export {
+  createCardTemplate, createCardDetail, createTableBodyTemplate, createCardReviewTemplate,
+};

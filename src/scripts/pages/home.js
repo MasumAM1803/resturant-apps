@@ -31,7 +31,7 @@ const Home = {
       if (restaurant.pictureId == null) {
         pictureId = 'https://dummyimage.com/500x750/cccccc/000000&text=No+Poster';
       } else {
-        pictureId = restaurant.pictureId;
+        pictureId = `https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}`;
       }
       recordsCard.innerHTML += createCardTemplate(restaurant, pictureId);
     });

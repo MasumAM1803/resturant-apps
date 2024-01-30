@@ -18,7 +18,7 @@ const Detail = {
   },
 
   async afterRender() {
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const url = UrlParser.parseActiveUrlWithId();
     const restaurants = await RestaurantDbSource.detail(url.id);
     const recordsCard = document.querySelector('#dataUser');
 
@@ -26,7 +26,7 @@ const Detail = {
     if (restaurants.pictureId == null) {
       pictureId = 'https://dummyimage.com/500x750/cccccc/000000&text=No+Poster';
     } else {
-      pictureId = restaurants.pictureId;
+      pictureId = `https://restaurant-api.dicoding.dev/images/medium/${restaurants.pictureId}`;
     }
     recordsCard.innerHTML = createCardDetail(restaurants, pictureId);
   },

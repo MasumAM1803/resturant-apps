@@ -10,11 +10,25 @@ const UrlParser = {
     return this._urlSplitter(url);
   },
 
+  parseActiveUrlWithId() {
+    const url = window.location.hash.slice(1).toLowerCase();
+    return this._urlGetId(url);
+  },
+
   _urlSplitter(url) {
     const urlsSplits = url.split('/');
     return {
       resource: urlsSplits[1] || null,
       id: urlsSplits[2] || null,
+      verb: urlsSplits[3] || null,
+    };
+  },
+
+  _urlGetId(url) {
+    const urlsSplits = url.split('/');
+    return {
+      resource: urlsSplits[1] || null,
+      id: urlsSplits[2].split('=')[1] || null,
       verb: urlsSplits[3] || null,
     };
   },
