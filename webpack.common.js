@@ -65,22 +65,22 @@ module.exports = {
     }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
-      // runtimeCaching: [
-      //   {
-      //     urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev'),
-      //     handler: 'StaleWhileRevalidate',
-      //     options: {
-      //       cacheName: 'restaurantdb-api',
-      //     },
-      //   },
-      //   {
-      //     urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/medium/'),
-      //     handler: 'StaleWhileRevalidate',
-      //     options: {
-      //       cacheName: 'restaurantdb-image-api',
-      //     },
-      //   },
-      // ],
+      runtimeCaching: [
+        {
+          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'restaurantdb-api',
+          },
+        },
+        {
+          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/medium/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'restaurantdb-image-api',
+          },
+        },
+      ],
     }),
     new CleanWebpackPlugin(),
   ],
