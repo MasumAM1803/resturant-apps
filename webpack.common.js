@@ -51,9 +51,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      // title: 'Home',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
       ...htmlWebpackPluginConfig,
