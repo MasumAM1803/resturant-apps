@@ -1,9 +1,10 @@
-import Home from '../pages/home';
-import Detail from '../pages/detail';
-import Like from '../pages/like';
+import Home from '../views/pages/home';
+import Detail from '../views/pages/detail';
+import Like from '../views/pages/like';
 
 const routes = {
   '/': Home,
+  '/home': Home,
   '/detail/:id': Detail,
   '/like': Like,
 };

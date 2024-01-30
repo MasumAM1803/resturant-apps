@@ -1,8 +1,8 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import '../styles/scss/main.scss';
 import './components/index';
-import App from './views/app';
 import swRegister from './utils/sw-register';
+import App from './views/app';
 
 window.addEventListener('DOMContentLoaded', async () => {
   const app = new App({

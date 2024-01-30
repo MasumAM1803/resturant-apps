@@ -1,7 +1,7 @@
-import RestaurantDbSource from '../data/restaurantdb-source';
-import UrlParser from '../routes/url-parser';
-import LikeButtonInitiator from '../utils/like-button-initiator';
-import { createCardDetail } from '../views/templates/template-card';
+import RestaurantDbSource from '../../data/restaurantdb-source';
+import UrlParser from '../../routes/url-parser';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
+import { createCardDetail } from '../templates/template-card';
 
 const Detail = {
   async render() {
