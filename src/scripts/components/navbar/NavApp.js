@@ -22,7 +22,7 @@ class NavApp extends LitWithoutShadowDom {
       <div class="navbar">
         <div class="navbar-container">
           <img class="navbar-brand" src="/images/mam-logo.png" width="44px" alt="${this.brandName}" />
-          <a id="menu" class="header__menu">☰</a>
+          <button id="menu" class="header__menu">☰</button>
           <nav id="drawer" class="nav">
             <nav-links class="ms-auto mb-2 mb-md-0">
           </nav>

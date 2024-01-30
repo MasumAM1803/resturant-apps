@@ -147,11 +147,24 @@ header {
 .header__menu {
   float: right;
   display: none;
+  background-color: transparent;
   cursor: pointer;
   color: #f2f2f2;
+  border: none;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+
+  &:hover {
+    background-color: $forth-color;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  &:active {
+    background-color: #04AA6D;
+    color: white;
+  }
 }
 
 .nav {
