@@ -8,7 +8,6 @@ import swRegister from './utils/sw-register';
 // import CONFIG from './globals/config';
 
 window.addEventListener('DOMContentLoaded', async () => {
-// eslint-disable-next-line no-unused-vars
   const app = new App({
     button: document.querySelector('#menu'),
     drawer: document.querySelector('#drawer'),

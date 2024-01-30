@@ -17,25 +17,6 @@ class RestaurantDbSource {
     const responseJson = await response.json();
     return responseJson.restaurant;
   }
-
-  // static async home() {
-  //   const fetchRecords = await fetch('/data/DATA.json');
-  //   const responseRecords = await fetchRecords.json();
-  //   return responseRecords.restaurants;
-  // }
-
-  // static async detail(id) {
-  //   if (!id) {
-  //     alert('Data dengan id yang dicari tidak ditemukan');
-  //     return;
-  //   }
-
-  //   const fetchRecords = await fetch('/data/DATA.json');
-  //   const responseRecords = await fetchRecords.json();
-  //   const restaurantRecord = responseRecords.restaurants;
-  //   const dataRecord = restaurantRecord.find((item) => `id=${item.id}` === id);
-  //   return dataRecord;
-  // }
 }
 
 export default RestaurantDbSource;
