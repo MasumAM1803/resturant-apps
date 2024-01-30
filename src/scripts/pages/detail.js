@@ -1,5 +1,6 @@
 import RestaurantDbSource from '../data/restaurantdb-source';
 import UrlParser from '../routes/url-parser';
+import LikeButtonInitiator from '../utils/like-button-initiator';
 import { createCardDetail } from '../views/templates/template-card';
 
 const Detail = {
@@ -13,6 +14,7 @@ const Detail = {
             </div>
           </div>
         </div>
+        <div id="likeButtonContainer"></div>
       </div>
     `;
   },
@@ -29,6 +31,18 @@ const Detail = {
       pictureId = `https://restaurant-api.dicoding.dev/images/medium/${restaurants.pictureId}`;
     }
     recordsCard.innerHTML = createCardDetail(restaurants, pictureId);
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant: {
+        id: restaurants.id,
+        name: restaurants.name,
+        description: restaurants.description,
+        city: restaurants.city,
+        pictureId: restaurants.pictureId,
+        rating: restaurants.rating,
+      },
+    });
   },
 };
 

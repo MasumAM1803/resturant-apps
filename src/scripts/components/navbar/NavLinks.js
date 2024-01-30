@@ -6,7 +6,7 @@ class NavLinks extends LitWithoutShadowDom {
     return html`
       <ul class="navbar-nav d-flex align-items-center gap-3">
         <nav-link content="Home" to="/"></nav-link>
-        <nav-link content="Favorite" to="#"></nav-link>
+        <nav-link content="Favorite" to="#/like"></nav-link>
         <nav-link content="About Us" to="https://masumam.site/about"></nav-link>
       </ul>
     `;
