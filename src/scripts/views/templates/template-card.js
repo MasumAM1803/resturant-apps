@@ -5,7 +5,7 @@
 const createCardTemplate = (restaurantRecord, pictureId) => `
     <div class="col-12 col-md-6 mt-3">
         <div class="card">
-            <a class="" href="/#/detail/id=${restaurantRecord.id}">
+            <a class="card__link" href="/#/detail/id=${restaurantRecord.id}">
                 <div class="card__header">
                 <h2 class="card__header-city">${restaurantRecord.city}</h2>
                 <img class="card__header-image lazyload" src="${pictureId}" alt="${restaurantRecord.name}-images">
@@ -29,7 +29,7 @@ const createCardDetail = (restaurantRecord, pictureId) => `
             </div>
             <div class="content">
                 <div class="detail-image">
-                <img class="lazyload" src="${pictureId}" alt="${restaurantRecord.name}-images" />
+                    <img class="lazyload" src="${pictureId}" alt="${restaurantRecord.name}-images" />
                 </div>
                 <p class="detail-rating">Rating: <span class="text-red">${restaurantRecord.rating}</span></p>
                 <p class="detail-rating">Address: ${restaurantRecord.address}</p>
@@ -90,6 +90,18 @@ const createCardReviewTemplate = (reviews) => {
   return html;
 };
 
+const createEmptyCardTemplate = () => `
+    <div class="col-12 col-md-6 mt-3">
+        <div class="restaurant-item__not__found">
+            <p>Restaurant Not Found</p>
+        </div>
+    </div>
+`;
+
 export {
-  createCardTemplate, createCardDetail, createTableBodyTemplate, createCardReviewTemplate,
+  createCardTemplate,
+  createCardDetail,
+  createTableBodyTemplate,
+  createCardReviewTemplate,
+  createEmptyCardTemplate,
 };

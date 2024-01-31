@@ -1,22 +1,14 @@
-import RestaurantDbSource from '../../data/restaurantdb-source';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import { createCardTemplate, createEmptyCardTemplate } from '../templates/template-card';
 
-const Home = {
+const Favorite = {
   async render() {
     return `
         <div class="main-content">
             <div class="py-5">
-                <section id="jumbotron-section">
-                    <div class="jumbotron-container">
-                    <picture>
-                      <source media="(max-width: 600px)" srcset="./images/hero-image_1-small.jpg">
-                      <img src="./images/hero-image_1-large.jpg" alt="hero image" class="hero-img" />
-                    </picture>
-                    </div>
-                </section>
                 <section tabindex="0" class="list-container" id="maincontent">
                     <div class="container">
-                    <h2>Restaurant List</h2>
+                    <h2>Your Favorite Restaurant</h2>
                     <div class="mt-3">
                         <div id="recordsCard" class="row"></div>
                     </div>
@@ -28,8 +20,9 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurants = await RestaurantDbSource.home();
-    const recordsCard = document.querySelector('#recordsCard');
+    const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+    const restaurantsContainer = document.querySelector('#recordsCard');
+
     if (restaurants.length) {
       restaurants.forEach((restaurant, pictureId = '') => {
         if (restaurant.pictureId == null) {
@@ -37,12 +30,12 @@ const Home = {
         } else {
           pictureId = `https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}`;
         }
-        recordsCard.innerHTML += createCardTemplate(restaurant, pictureId);
+        restaurantsContainer.innerHTML += createCardTemplate(restaurant, pictureId);
       });
     } else {
-      recordsCard.innerHTML = createEmptyCardTemplate();
+      restaurantsContainer.innerHTML = createEmptyCardTemplate();
     }
   },
 };
 
-export default Home;
+export default Favorite;
