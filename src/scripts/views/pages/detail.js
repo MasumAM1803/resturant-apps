@@ -1,6 +1,6 @@
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import { createCardDetail } from '../templates/template-card';
 
 const Detail = {
@@ -32,7 +32,7 @@ const Detail = {
     }
     recordsCard.innerHTML = createCardDetail(restaurants, pictureId);
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
         id: restaurants.id,
