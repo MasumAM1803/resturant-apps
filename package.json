@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "sass:build": "sass styles/scss/main.scss styles/main.css --watch",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "build-image": "node ./src/scripts/sharp.js"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
@@ -31,11 +32,14 @@
     "fake-indexeddb": "^4.0.2",
     "html-webpack-plugin": "^5.5.3",
     "http-server": "^14.1.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
     "postcss-loader": "^8.0.0",
     "sass": "^1.70.0",
     "sass-loader": "^14.0.0",
+    "sharp": "^0.33.2",
     "style-loader": "^3.3.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
@@ -46,6 +50,7 @@
   },
   "dependencies": {
     "idb": "^8.0.0",
+    "lazysizes": "^5.3.2",
     "lit": "^3.1.1",
     "regenerator-runtime": "^0.14.0",
     "workbox-precaching": "^7.0.0",

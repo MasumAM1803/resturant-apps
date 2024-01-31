@@ -8,7 +8,10 @@ const Home = {
             <div class="py-5">
                 <section id="jumbotron-section">
                     <div class="jumbotron-container">
-                    <img src="./images/heros/hero-image_1.jpg" alt="hero image" class="hero-img" />
+                    <picture>
+                      <source media="(max-width: 600px)" srcset="./images/hero-image_1-small.jpg">
+                      <img src="./images/hero-image_1-large.jpg" alt="hero image" class="hero-img" />
+                    </picture>
                     </div>
                 </section>
                 <section tabindex="0" class="list-container" id="maincontent">
