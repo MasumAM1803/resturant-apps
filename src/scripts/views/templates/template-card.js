@@ -8,7 +8,7 @@ const createCardTemplate = (restaurantRecord, pictureId) => `
             <a class="card__link" href="/#/detail/id=${restaurantRecord.id}">
                 <div class="card__header">
                 <h2 class="card__header-city">${restaurantRecord.city}</h2>
-                <img class="card__header-image lazyload" src="${pictureId}" alt="${restaurantRecord.name}-images">
+                <img class="card__header-image lazyload" data-src="${pictureId}" alt="${restaurantRecord.name}-images">
                 </div>
                 <div class="card__body">
                 <h3 class="card__body-rating">Rating: <span class="text-red">${restaurantRecord.rating}</span></h3>
@@ -29,7 +29,7 @@ const createCardDetail = (restaurantRecord, pictureId) => `
             </div>
             <div class="content">
                 <div class="detail-image">
-                    <img class="lazyload" src="${pictureId}" alt="${restaurantRecord.name}-images" />
+                    <img class="lazyload" data-src="${pictureId}" alt="${restaurantRecord.name}-images" />
                 </div>
                 <p class="detail-rating">Rating: <span class="text-red">${restaurantRecord.rating}</span></p>
                 <p class="detail-rating">Address: ${restaurantRecord.address}</p>
